@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int* bubblesort (int arr[], int length) {
+	int temp, swap = 0;
+	int length2 = length;
+	for (int i = 0; i < length; i++)
+	{
+		for (int j = 0; j < length2 - 1; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				swap = 1;
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+		if (swap = 0) {
+			return arr;
+		};
+		length2--;
+
+		swap = 0;
+	}
+	return arr;
+}
+
+int main () {
+	printf ("Hello \n");
+	int arr[5] = { 10,43,67,690,123 };
+	int* p = bubblesort (arr, 5);
+	for (int i = 0; i < 5; i++)
+	{
+		printf ("%d \n", p[i]);
+	}
+}
